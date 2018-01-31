@@ -6,7 +6,7 @@
 	foreach ($data as $line)
 	{
 		$review = json_decode($line, true);
-		if($review["reviewText"]==5)
+		if($review["overall"]==1)
 		{
 			$good .= "{$i}-".$review["reviewText"]."\n"; 
 			$i++;
