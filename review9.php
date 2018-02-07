@@ -8,7 +8,7 @@
 	$i=0;
 	foreach ($data as $line)
 	{
-		if($i>4000)
+		if($i>8000)
 			break;
 
 		$review = json_decode($line, true);
@@ -29,10 +29,17 @@
 	}
 	foreach ($rates as $key => $value)
 	{
+		if(count($value)>3)
+			continue;
+		else {
 		echo $key.":: ";
 		foreach($value as $key1 => $value1)
-			echo "$key1: $value1,";
+		{
+			if($value1>4)
+				echo "$key1: $value1,";
+		}
 		echo "\n";
+		}
 	}
 
 ?>

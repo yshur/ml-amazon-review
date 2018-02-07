@@ -6,7 +6,7 @@
 	$a=$b=$c=$d=$e=0;
 	foreach ($data as $line)
 	{
-		if($i>4000)
+		if($i>8000)
 			break;
 
 		$review = json_decode($line, true);
